@@ -16,7 +16,7 @@ describe('sum function', () => {
 describe('addArray function', () => {
   test('should return 0 when the array is empty', () => {
     // Prepare
-    const numberArray = [];
+    const numberArray: number[] = [];
     // Stimulus
     const result = addArray(numberArray);
     // Assertion: comportamiento esperado.

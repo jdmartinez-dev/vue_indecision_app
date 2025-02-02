@@ -2,7 +2,7 @@
   <section>
     <h2>{{ title }}</h2>
     <h3>Counter: {{ counter }}</h3>
-    <h3>Square: {{ squareCounter }}</h3>
+    <h3 data-testid="square-label">Square: {{ squareCounter }}</h3>
 
     <div>
       <button class="btn" @click="counter++">+1</button>
@@ -22,7 +22,7 @@ interface Props {
 
 const props = defineProps<Props>();
 const title = ref(props.text);
-const { counter, squareCounter } = useCounter(10);
+const { counter, squareCounter } = useCounter(props.value);
 
 // import { computed, ref } from 'vue';
 
